@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 
 export default function Home() {
   return (
-    <Layout headTitle="HELLO" headerText="qjsdqsd">
-      <div>Hello world!</div>
+    <Layout headTitle="Equipe" headerText="voici l'équipe">
+      <div>Jean charles</div>
     </Layout>
   )
 }
