@@ -1,6 +1,6 @@
 import React from "react"
 
-import Layout from "../components/Layout"
+import Layout from "../components/layout"
 import ProcessStep from "../components/ProcessStep"
 
 export default function Process() {
