@@ -10,10 +10,10 @@ export default function Layout({ children, headTitle, headerText }) {
 						<Link to="/">Accueil</Link>
 						<Link to="/equipe">Notre équipe</Link>
 						<Link to="/agrements">Agréments</Link>
-						<img className="logo-header" src="/logo-fiducia.png" />
+						<img className="logo-header" src="/logo-fiducia.webp" />
 						<Link to="/process">Process</Link>
-						<Link to="champs-d-intervention">Champs d’intervention</Link>
-						<Link to="contact">Contact</Link>
+						<Link to="/champs-d-intervention">Champs d’intervention</Link>
+						<Link to="/contact">Contact</Link>
 					</nav>
 				</div>
 				<div className="container">
