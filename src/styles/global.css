@@ -45,10 +45,10 @@ main {
 	color: #03192F;
 	margin: auto;
 	font-family: "speak";
-	padding-left: 200px;
-	padding-right: 200px;
+	padding-top: 125px;
+	padding-bottom: 125px;
+	width: 100%;
 }
-
 
 
 .layout {
@@ -67,8 +67,12 @@ header {
 	background-image: linear-gradient(to bottom, rgba(15, 42, 68, 0.88), rgba(15, 42, 68,  0.88)),url('/pontneuf.jpg');
 	background-position: center;
 	background-size: cover;
-	padding-bottom: 120px;
+	padding-bottom: 60px;
 	color: white;
+}
+
+.header-full-height {
+	min-height: 80vh;
 }
 
 .logo-header {
@@ -97,7 +101,7 @@ nav {
 	max-width: 700px;
 	margin: auto;
 	padding: 0px 16px;
-	border-left: 5px solid #084682;
+	/* border-left: 5px solid #084682; */
 }
 
 h2 {
@@ -118,6 +122,7 @@ h4 {
 .header-text {
 	font-family: "speak";
 	font-size: 17px;
+	margin-bottom: 60px;
 }
 
 
@@ -127,17 +132,7 @@ footer {
 	align-items: center;
 }
 
-.logo-footer {
-	max-height: 20px;
-	margin-bottom: 10px;
-}
 
-.elements-footer {
-	display: flex;
-    flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
 
 .footer-elements-container {
 	max-width: 1024px;
@@ -149,4 +144,52 @@ footer {
 	font-family: "roboto";
 	font-size: 12px;
 	color: white;
+}
+
+.elements-footer {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.logo-footer {
+	height: 22px;
+	margin-bottom: 10px;
+}
+
+.process-step {
+	margin-bottom: 100px
+}
+
+.process-step-title {
+	max-width: 385px;
+}
+
+.process-handle {
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	background-color: #03192F;
+	margin-left: -50px;
+	margin-top: 20px;
+	z-index: 10;
+}
+
+.process-line {
+	position: absolute;
+	width: 1px;
+	height: 384px;
+	background-color: #03192F;
+	margin-left: -46px;
+	margin-top: 20px;
+}
+
+.process-line-white {
+	position: absolute;
+	width: 1px;
+	height: 300px;
+	background-color: white;
+	margin-left: -46px;
+	margin-top: 20px;
 }

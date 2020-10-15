@@ -1,10 +1,10 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
-export default function Layout({ children, headTitle, headerText, boldTitleSection, thinTitleSection, verySmallTitle}) {
+export default function Layout({ children, headTitle, headerText }) {
 	return (
 		<div className="layout">
-			<header>
+			<header className={children ? "" : "header-full-height"}>
 				<div className="nav-gradient">
 					<nav>
 						<Link to="/">Accueil</Link>
@@ -26,37 +26,23 @@ export default function Layout({ children, headTitle, headerText, boldTitleSecti
 				</div>
 
 			</header>
-			<main>
-				{boldTitleSection ? (
-					<h2>{boldTitleSection}</h2>
+			{children ? (
+					<main>{children}</main>
 				) : null}
-
-				{thinTitleSection ? (
-					<h3>{thinTitleSection}</h3>
-				) : null}
-
-				{verySmallTitle ? (
-					<h4>{verySmallTitle}</h4>
-				) : null}
-
-				{children ? (
-					<div>{children}</div>
-				) : null}
-			</main>
 			<footer>
 				<div className="footer-elements-container">
 					<div className="elements-footer">
-						<img className="logo-footer" src="/phone.png" />
+						<img className="logo-footer" src="/phone.svg" />
 						<div>06 17 88 87 35
 					<br />06 86 14 21 74</div>
 					</div>
 					<div className="elements-footer">
-						<img className="logo-footer" src="/location.png" />
+						<img className="logo-footer" src="/location.svg" style={{height: "25px"}} />
 						<div>41 rue Nicolas Bachelier
 					<br />31000 Toulouse </div>
 					</div>
 					<div className="elements-footer">
-						<img className="logo-footer" src="/envelope.png" />
+						<img className="logo-footer" src="/mail.svg"  />
 						<div>contact@fiducia-cf.com</div>
 					</div>
 				</div>
