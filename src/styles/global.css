@@ -1,8 +1,35 @@
 @import-normalize;
 
-* {
+/* {
+	color: white;
+} */
+
+a {
 	color: white;
 }
+
+@font-face {
+	font-family: "sagonaLight";
+	src: url("/sagonaLight.TTF");
+  }
+
+
+  @font-face {
+	font-family: "sagonaBold";
+	src: url("/sagonaBold.TTF");
+  }
+
+@font-face {
+	font-family: "speak";
+	src: url("/speak.ttf");
+  }
+
+
+  @font-face {
+	font-family: "roboto";
+	src: url("/Roboto-Light.ttf")
+  }
+	
 
 html {
 	background-color: #021830;
@@ -12,18 +39,40 @@ body {
 	margin: 0px;
 }
 
+main {
+	flex: 1;
+	background-color: white;
+	color: #03192F;
+	margin: auto;
+	font-family: "speak";
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+
+
 .layout {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
 }
 
+h1 {
+	font-family: "sagonaBold";
+	font-size: 48px;
+	color: white;
+}
+
 header {
-	border: 1px solid yellow;
 	background-image: linear-gradient(to bottom, rgba(15, 42, 68, 0.88), rgba(15, 42, 68,  0.88)),url('/pontneuf.jpg');
 	background-position: center;
 	background-size: cover;
 	padding-bottom: 120px;
+	color: white;
+}
+
+.logo-header {
+	max-width: 106px;
 }
 
 .nav-gradient {
@@ -31,33 +80,63 @@ header {
 	height: 150px;
 	display: flex;
 	justify-content: center;
+	font-family: "sagonaLight";
+	font-size: 17px;
 }
 
 nav {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
-	border: 1px solid red;
 	height: 120px;
 	align-items: center;
 	max-width: 1024px;
-
 }
 
 .container {
 	max-width: 700px;
 	margin: auto;
 	padding: 0px 16px;
+	border-left: 5px solid #084682;
 }
 
-main {
-	flex: 1;
+h2 {
+	font-family: "sagonaBold";
+	font-size: 24px;
 }
+
+h3 {
+	font-family: "speak";
+	font-size: 36px;
+}
+
+h4 {
+	font-family: "speak";
+	font-size: 14px;
+}
+
+.header-text {
+	font-family: "speak";
+	font-size: 17px;
+}
+
 
 footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.logo-footer {
+	max-height: 20px;
+	margin-bottom: 10px;
+}
+
+.elements-footer {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 .footer-elements-container {
@@ -67,5 +146,7 @@ footer {
 	align-items: center;
 	justify-content: space-around;
 	width: 100%;
-
+	font-family: "roboto";
+	font-size: 12px;
+	color: white;
 }
