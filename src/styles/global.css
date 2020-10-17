@@ -79,6 +79,13 @@ header {
 	width: 106px;
 }
 
+.logo-header.mobile {
+	width: 106px;
+	height: 52px;
+	margin-top: 32px;
+}
+
+
 .nav-gradient {
 	background-image: linear-gradient(to bottom, rgba(0, 19, 37, 1), rgba(3, 25, 47, 0));
 	height: 150px;
@@ -114,7 +121,9 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 350px;
+    width: 330px;
+    justify-content: start;
+	padding-top: 100px;
 	transform: translateX(-350px);
 }
 
@@ -124,6 +133,9 @@ nav {
 	transform: translateX(0px) !important;
 }
 
+.nav-menu-mobile a {
+	margin-bottom: 32px;
+}
 
 
 @media only screen and (max-width:600px) {
@@ -186,7 +198,7 @@ footer {
 	min-height: 160px;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	width: 100%;
 	font-family: "roboto";
 	font-size: 12px;
@@ -198,7 +210,30 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	font-family: "speak";
+	font-size: 1.4em;
 }
+
+.footer-separator {
+	width: 1px;
+	height: 90px;
+	background-color: white;
+	opacity: .3;
+}
+
+@media only screen and (max-width:600px) {
+	.footer-elements-container	{
+		padding: 40px 0px;
+		flex-direction: column;
+	}
+	.elements-footer {
+		padding: 20px
+	}
+	.footer-separator {
+		height: 35px;
+	}
+}
+
 
 .logo-footer {
 	height: 22px;
@@ -250,7 +285,7 @@ footer {
 
 .burger-menu {
 	position: fixed;
-	top: 20px;
+	top: 32px;
 	left: 20px;
 	z-index: 6;
 	display: flex;
@@ -318,6 +353,7 @@ footer {
 	-webkit-transform: rotate(0);
 	-ms-transform: rotate(0);
 	transform: rotate(0);
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, .4);
 }
 
 .burger .burger-lines:after {
@@ -434,18 +470,24 @@ footer {
 	-webkit-animation-duration: 0.4s;
 	animation-duration: 0.4s;
 	background-color: transparent;
+	box-shadow: none !important;
+
 }
 
 .burger.burger-slide.open .burger-lines:before,
 .burger.burger-slide.open .burger-lines:after {
 	left: 0.5em;
 	top: 0px;
+	box-shadow: none !important;
+
 }
 
 .burger.burger-slide.open .burger-lines:before {
 	-webkit-transform: rotate(-45deg);
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
+	box-shadow: none !important;
+
 }
 
 .burger.burger-slide.open .burger-lines:after {
