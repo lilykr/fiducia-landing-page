@@ -63,6 +63,7 @@ h1 {
 	color: white;
 }
 
+
 header {
 	background-image: linear-gradient(to bottom, rgba(15, 42, 68, 0.88), rgba(15, 42, 68, 0.88)), url('/pontneuf.jpg');
 	background-position: center;
@@ -164,13 +165,13 @@ nav {
 }
 
 h2 {
-	font-family: "sagonaBold";
-	font-size: 24px;
+	font-family: "speak";
+	font-size: 36px;
 }
 
 h3 {
-	font-family: "speak";
-	font-size: 36px;
+	font-family: "sagonaBold";
+	font-size: 24px;
 }
 
 h4 {
@@ -277,6 +278,61 @@ footer {
 }
 
 
+
+.equipe-text-sarah > h2 {
+	font-family: "speak";
+	font-size: 36px;
+	margin-bottom: 0;
+}
+
+.equipe-text-sarah > h3 {
+	font-family: "speak";
+	font-size: 14px;
+	margin-top: 1px;
+	margin-bottom: 30px;
+}
+
+
+.equipe-photo {
+	height: 217px;
+	padding-top: 40px;
+}
+
+.equipe-container-sarah {
+	display: flex;
+	align-items: center;
+	margin-bottom: 74px;
+}
+
+.equipe-text-sarah {
+	padding-left: 50px;
+}
+
+.equipe-text-chris > h2 {
+	font-family: "speak";
+	font-size: 36px;
+	margin-bottom: 0;
+}
+
+.equipe-text-chris > h3 {
+	font-family: "speak";
+	font-size: 14px;
+	margin-top: 1px;
+	margin-bottom: 30px;
+}
+
+.equipe-container-chris {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	margin-top: 74px;
+	margin-bottom: 35px
+}
+
+.equipe-text-chris {
+	padding-right: 50px;
+
+}
 
 
 :global(button) {
