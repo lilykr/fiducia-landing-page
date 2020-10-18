@@ -66,7 +66,7 @@ export default function Layout({ children, headTitle, headerText }) {
 				return null
 			return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
 		}
-		return <Link className={`link-header ${window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+		return <Link key={element.link} className={`link-header ${ typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
 	})
 
 	return (
@@ -77,8 +77,8 @@ export default function Layout({ children, headTitle, headerText }) {
 						<>
 							<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
 							<div className="burger-menu" onClick={toggle}>
-								<div class={c("burger burger-slide", opened && "open")}>
-									<div class="burger-lines"></div>
+								<div className={c("burger burger-slide", opened && "open")}>
+									<div className="burger-lines"></div>
 								</div>
 							</div>
 							<nav className={c("nav-menu-mobile", opened ? "visible" : "")} >

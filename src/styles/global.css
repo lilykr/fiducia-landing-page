@@ -404,6 +404,34 @@ input {
 	background-color: rgba(56, 65, 73, 6%);
 	border-radius: 5px;
 	margin-bottom: 15px;
+	padding:0px 12px;
+	font-family: "speak";
+	font-size: 1em;
+}
+
+textarea {
+	width: 380px;
+	height: 32px;
+	border: none;
+	background-color: rgba(56, 65, 73, 6%);
+	border-radius: 5px;
+	margin-bottom: 15px;
+	padding: 12px;
+	font-family: "speak";
+	font-size: 1em;
+	resize: none;
+}
+
+label.form-error {
+	color: rgb(163, 1, 1);
+}
+
+input.form-error {
+	border: 1px solid rgb(163, 1, 1);
+}
+
+textarea.form-error {
+	border: 1px solid rgb(163, 1, 1);
 }
 
 .input-message {
@@ -417,8 +445,15 @@ input {
 	background-color: #03192F;
 	color: white;
 	border: 0px;
-	margin-left: 280px
+	align-self: flex-end;
 }
+
+.button-form:hover {
+	background-color: #092a4b;
+}
+
+
+
 
 /* Burger menu */
 
@@ -435,9 +470,6 @@ input {
 	align-items: center;
 	justify-content: center;
 }
-
-
-
 
 .logo-in-menu {
 	width: 15vw;
