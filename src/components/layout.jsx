@@ -66,7 +66,7 @@ export default function Layout({ children, headTitle, headerText }) {
 				return null
 			return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
 		}
-		return <Link className={`link-header ${window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+		return <Link className={`link-header ${window && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
 	})
 
 	return (
