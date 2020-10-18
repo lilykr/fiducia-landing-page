@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 export default function Home() {
   return (
     <Layout
-      headTitle="Contacts"
+      headTitle="Contact"
       headerText="Nous vous accompagnons dans l’atteinte de vos objectifs patrimoniaux au travers d’un conseil individualisé et personnalisé.
 
 Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou remplir le formulaire de contact ci-après."
