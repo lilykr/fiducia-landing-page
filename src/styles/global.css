@@ -253,7 +253,7 @@ footer {
 	position: absolute;
 	width: 9px;
 	height: 9px;
-	background-color: #03192F;
+	background-color: #084682;
 	margin-left: -50px;
 	margin-top: 20px;
 	z-index: 10;
@@ -331,9 +331,96 @@ footer {
 
 .equipe-text-chris {
 	padding-right: 50px;
-
 }
 
+
+
+/* Agréments */
+
+.list-agrements {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.text-top-agrements {
+	margin-bottom:60px;
+}
+
+/* Champs d'intervention */
+
+.list-champs {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.list-champs li::before {
+	content: "■";
+	display: inline-block;
+	color: #084682;
+	width: 9px;
+	height: 9px;
+	margin-right: 12px;
+	margin-bottom: 42px;
+}
+
+.text-top-champs {
+	margin-bottom: 44px;
+}
+
+.text-bottom-champs {
+	margin-top: 60px;
+}
+
+
+/* Contact */
+
+.contact-page {
+	display: flex;
+    flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.contact-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.infos-contact {
+	display: flex;
+    flex-direction: column;
+	align-items: flex-end;
+	text-align:end;
+}
+
+.infos-contact > h2 {
+	margin-top: 10px;
+}
+
+
+input {
+	width: 380px;
+	height: 32px;
+	border: none;
+	background-color: rgba(56, 65, 73, 6%);
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+
+.input-message {
+	height: 164px;
+}
+
+.button-form {
+	width: 104px;
+	height: 27px;
+	border-radius: 2px;
+	background-color: #03192F;
+	color: white;
+	border: 0px;
+	margin-left: 280px
+}
+
+/* Burger menu */
 
 :global(button) {
 	outline: none;
@@ -551,3 +638,4 @@ footer {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
+
