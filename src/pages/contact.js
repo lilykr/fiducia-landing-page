@@ -37,7 +37,6 @@ export default function Home() {
   })
 
   const handleSubmit = (e) => {
-    console.log("SUBMIT")
     e.preventDefault()
 
     if (checkErrors())
@@ -78,7 +77,6 @@ export default function Home() {
   }
 
   const checkError = (field, value) => {
-    console.log("cehck erro")
     if (field === 'nom')
       setError(field, value.length === 0)
     if (field === 'email')
@@ -92,7 +90,7 @@ export default function Home() {
   const onBlur = (e) => {
     checkError(e.target.name, e.target.value)
   }
-  console.log(errors)
+
   return (
     <Layout
       headTitle="Contact"
@@ -101,49 +99,57 @@ export default function Home() {
 Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou remplir le formulaire de contact ci-après."
     >
       <div className="container">
-        <div className="contact-page">
-          <div className="infos-contact">
-            <h2>Nos coordonnées</h2>
-            <div>06 17 88 87 35
+        {!done ?
+          <div className="contact-page">
+
+            <div className="infos-contact">
+              <h2>Nos coordonnées</h2>
+              <div>06 17 88 87 35
             <br />
             06 86 14 21 74
         <br />
         contact@fiducia-cf.com</div>
-            <br />
-            <h2>Horaires</h2>
-            <div>Du lundi au vendredi de 8h30 à 18h00</div>
+              <br />
+              <h2>Horaires</h2>
+              <div>Du lundi au vendredi de 8h30 à 18h00</div>
+            </div>
+            <div className="container-form">
+              <form
+                name="contact"
+                method="post"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+                className="contact-form"
+              >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="contact" />
+                <p hidden>
+                  <label>
+                    Don’t fill this out: <input name="bot-field" onChange={handleChange} />
+                  </label>
+                </p>
+                {/* Bot field end */}
+                <label htmlFor="nom" className={c(errors.nom && "form-error")}>Nom*</label>
+                <input type="text" id="nom" name="nom" className={c(errors.nom && "form-error")} onBlur={onBlur} onChange={handleChange} />
+                <label htmlFor="email" className={c(errors.email && "form-error")}>Adresse mail*</label>
+                <input type="text" id="email" name="email" className={c(errors.email && "form-error")} onBlur={onBlur} onChange={handleChange} />
+                <label htmlFor="telephone">Téléphone</label>
+                <input type="text" id="telephone" name="telephone" onBlur={onBlur} onChange={handleChange} />
+                <label htmlFor="sujet" className={c(errors.sujet && "form-error")}>Sujet*</label>
+                <input type="text" id="sujet" name="sujet" className={c(errors.sujet && "form-error")} onBlur={onBlur} onChange={handleChange} />
+                <label htmlFor="message" className={c(errors.message && "form-error")}>Message*</label>
+                <textarea className="input-message" type="text" id="message" name="message" className={c(errors.message && "form-error")} onBlur={onBlur} onChange={handleChange} />
+                <button type="submit" className="button-form">Envoyer</button>
+              </form>
+            </div>
           </div>
-          <div className="container-form">
-            <form
-              name="contact"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-              className="contact-form"
-            >
-              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="contact" />
-              <p hidden>
-                <label>
-                  Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-                </label>
-              </p>
-              {/* Bot field end */}
-              <label htmlFor="nom" className={c(errors.nom && "form-error")}>Nom*</label>
-              <input type="text" id="nom" name="nom" className={c(errors.nom && "form-error")} onBlur={onBlur} onChange={handleChange} />
-              <label htmlFor="email" className={c(errors.email && "form-error")}>Adresse mail*</label>
-              <input type="text" id="email" name="email" className={c(errors.email && "form-error")} onBlur={onBlur} onChange={handleChange} />
-              <label htmlFor="telephone">Téléphone</label>
-              <input type="text" id="telephone" name="telephone" onBlur={onBlur} onChange={handleChange} />
-              <label htmlFor="sujet" className={c(errors.sujet && "form-error")}>Sujet*</label>
-              <input type="text" id="sujet" name="sujet" className={c(errors.sujet && "form-error")} onBlur={onBlur} onChange={handleChange} />
-              <label htmlFor="message" className={c(errors.message && "form-error")}>Message*</label>
-              <textarea className="input-message" type="text" id="message" name="message" className={c(errors.message && "form-error")} onBlur={onBlur} onChange={handleChange} />
-              <button type="submit" className="button-form">Envoyer</button>
-            </form>
-          </div>
-        </div>
+          :
+          <>
+            <h2 style={{marginBottom: "10px"}}>Merci de nous avoir contactés</h2>
+            <div style={{fontSize: "1.16em"}}>Nous reviendrons vers vous rapidement.</div>
+          </>
+        }
       </div>
 
     </Layout>
