@@ -1,5 +1,4 @@
 @import-normalize;
-
 /* {
 	color: white;
 } */
@@ -13,7 +12,6 @@ a {
 	src: url("/sagonaLight.TTF");
 }
 
-
 @font-face {
 	font-family: "sagonaBold";
 	src: url("/sagonaBold.TTF");
@@ -24,12 +22,10 @@ a {
 	src: url("/speak.ttf");
 }
 
-
 @font-face {
 	font-family: "roboto";
 	src: url("/Roboto-Light.ttf")
 }
-
 
 html {
 	background-color: #021830;
@@ -50,7 +46,6 @@ main {
 	width: 100%;
 }
 
-
 .layout {
 	display: flex;
 	flex-direction: column;
@@ -62,7 +57,6 @@ h1 {
 	font-size: 48px;
 	color: white;
 }
-
 
 header {
 	background-image: linear-gradient(to bottom, rgba(15, 42, 68, 0.88), rgba(15, 42, 68, 0.88)), url('/pontneuf.jpg');
@@ -85,7 +79,6 @@ header {
 	height: 52px;
 	margin-top: 32px;
 }
-
 
 .nav-gradient {
 	background-image: linear-gradient(to bottom, rgba(0, 19, 37, 1), rgba(3, 25, 47, 0));
@@ -122,8 +115,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    width: 330px;
-    justify-content: start;
+	width: 330px;
+	justify-content: start;
 	padding-top: 100px;
 	transform: translateX(-350px);
 }
@@ -138,14 +131,12 @@ nav {
 	margin-bottom: 32px;
 }
 
-
 @media only screen and (max-width:600px) {
 	.nav-menu-mobile {
 		width: 100vw;
 		transform: translateX(-100vw);
 	}
 }
-
 
 .link-header {
 	text-decoration: none;
@@ -185,14 +176,11 @@ h4 {
 	margin-bottom: 60px;
 }
 
-
 footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-
 
 .footer-elements-container {
 	max-width: 1024px;
@@ -223,7 +211,7 @@ footer {
 }
 
 @media only screen and (max-width:600px) {
-	.footer-elements-container	{
+	.footer-elements-container {
 		padding: 40px 0px;
 		flex-direction: column;
 	}
@@ -234,7 +222,6 @@ footer {
 		height: 35px;
 	}
 }
-
 
 .logo-footer {
 	height: 22px;
@@ -277,21 +264,18 @@ footer {
 	margin-top: 20px;
 }
 
-
-
-.equipe-text-sarah > h2 {
+.equipe-text-sarah>h2 {
 	font-family: "speak";
 	font-size: 36px;
 	margin-bottom: 0;
 }
 
-.equipe-text-sarah > h3 {
+.equipe-text-sarah>h3 {
 	font-family: "speak";
 	font-size: 14px;
 	margin-top: 1px;
 	margin-bottom: 30px;
 }
-
 
 .equipe-photo {
 	height: 217px;
@@ -308,13 +292,13 @@ footer {
 	padding-left: 50px;
 }
 
-.equipe-text-chris > h2 {
+.equipe-text-chris>h2 {
 	font-family: "speak";
 	font-size: 36px;
 	margin-bottom: 0;
 }
 
-.equipe-text-chris > h3 {
+.equipe-text-chris>h3 {
 	font-family: "speak";
 	font-size: 14px;
 	margin-top: 1px;
@@ -333,8 +317,6 @@ footer {
 	padding-right: 50px;
 }
 
-
-
 /* Agréments */
 
 .list-agrements {
@@ -343,7 +325,25 @@ footer {
 }
 
 .text-top-agrements {
-	margin-bottom:60px;
+	margin-bottom: 60px;
+}
+
+.list-habilitations {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.list-habilitations li {
+	display: flex;
+}
+
+.list-habilitations li::before {
+	content: "■";
+	display: inline-block;
+	color: #084682;
+	width: 9px;
+	height: 9px;
+	margin-right: 12px;
 }
 
 /* Champs d'intervention */
@@ -371,12 +371,11 @@ footer {
 	margin-top: 60px;
 }
 
-
 /* Contact */
 
 .contact-page {
 	display: flex;
-    flex-direction: row-reverse;
+	flex-direction: row-reverse;
 	justify-content: space-between;
 }
 
@@ -387,15 +386,14 @@ footer {
 
 .infos-contact {
 	display: flex;
-    flex-direction: column;
+	flex-direction: column;
 	align-items: flex-end;
-	text-align:end;
+	text-align: end;
 }
 
-.infos-contact > h2 {
+.infos-contact>h2 {
 	margin-top: 10px;
 }
-
 
 input {
 	width: 380px;
@@ -404,7 +402,7 @@ input {
 	background-color: rgba(56, 65, 73, 6%);
 	border-radius: 5px;
 	margin-bottom: 15px;
-	padding:0px 12px;
+	padding: 0px 12px;
 	font-family: "speak";
 	font-size: 1em;
 }
@@ -452,9 +450,6 @@ textarea.form-error {
 	background-color: #092a4b;
 }
 
-
-
-
 /* Burger menu */
 
 :global(button) {
@@ -475,7 +470,6 @@ textarea.form-error {
 	width: 15vw;
 	margin-top: 2vh;
 }
-
 
 .burger {
 	height: 3em;
@@ -514,9 +508,7 @@ textarea.form-error {
 	margin-top: -0.125em;
 }
 
-.burger .burger-lines,
-.burger .burger-lines:after,
-.burger .burger-lines:before {
+.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
 	pointer-events: none;
 	display: block;
 	content: '';
@@ -547,31 +539,25 @@ textarea.form-error {
 		transform: translateX(0);
 		opacity: 1;
 	}
-
 	25% {
 		opacity: 0;
 	}
-
 	49% {
 		-webkit-transform: translateX(-0.7em);
 		transform: translateX(-0.7em);
 		opacity: 0;
 	}
-
 	50% {
 		-webkit-transform: translateX(0.7em);
 		transform: translateX(0.7em);
 		opacity: 0;
 	}
-
 	51% {
 		opacity: 0;
 	}
-
 	75% {
 		opacity: 1;
 	}
-
 	100% {
 		-webkit-transform: translateX(0px);
 		transform: translateX(0px);
@@ -585,31 +571,25 @@ textarea.form-error {
 		transform: translateX(0);
 		opacity: 1;
 	}
-
 	25% {
 		opacity: 0;
 	}
-
 	49% {
 		-webkit-transform: translateX(-0.7em);
 		transform: translateX(-0.7em);
 		opacity: 0;
 	}
-
 	50% {
 		-webkit-transform: translateX(0.7em);
 		transform: translateX(0.7em);
 		opacity: 0;
 	}
-
 	51% {
 		opacity: 0;
 	}
-
 	75% {
 		opacity: 1;
 	}
-
 	100% {
 		-webkit-transform: translateX(0px);
 		transform: translateX(0px);
@@ -623,8 +603,7 @@ textarea.form-error {
 	transition: .1s all .15s;
 }
 
-.burger.burger-slide .burger-lines:after,
-.burger.burger-slide .burger-lines:before {
+.burger.burger-slide .burger-lines:after, .burger.burger-slide .burger-lines:before {
 	width: 2em;
 	-webkit-transition: .1s all .15s;
 	-o-transition: .1s all .15s;
@@ -646,15 +625,12 @@ textarea.form-error {
 	animation-duration: 0.4s;
 	background-color: transparent;
 	box-shadow: none !important;
-
 }
 
-.burger.burger-slide.open .burger-lines:before,
-.burger.burger-slide.open .burger-lines:after {
+.burger.burger-slide.open .burger-lines:before, .burger.burger-slide.open .burger-lines:after {
 	left: 0.5em;
 	top: 0px;
 	box-shadow: none !important;
-
 }
 
 .burger.burger-slide.open .burger-lines:before {
@@ -662,7 +638,6 @@ textarea.form-error {
 	-ms-transform: rotate(-45deg);
 	transform: rotate(-45deg);
 	box-shadow: none !important;
-
 }
 
 .burger.burger-slide.open .burger-lines:after {
@@ -670,4 +645,3 @@ textarea.form-error {
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
-

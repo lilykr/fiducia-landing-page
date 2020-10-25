@@ -15,22 +15,23 @@ const arrLinkNavBar = [
 	},
 
 	{
-		name: "Agréments",
-		link: "/agrements"
+		name: "Process",
+		link: "/process"
 	},
 
 	{
 		logo: true
 	},
 
-	{
-		name: "Process",
-		link: "/process"
-	},
 
 	{
 		name: "Champs d'intervention",
 		link: "/champs-d-intervention"
+	},
+
+	{
+		name: "Agréments",
+		link: "/agrements"
 	},
 
 	{
@@ -44,7 +45,7 @@ const arrLinkNavBar = [
 
 }
 
-export default function Layout({ children, headTitle, headerText }) {
+export default function Layout({ children, headTitle, headerText, renderHeaderText }) {
 	const [opened, setOpened] = React.useState(false)
 
 	const isMobile = useMediaQuery({
@@ -98,6 +99,9 @@ export default function Layout({ children, headTitle, headerText }) {
 					) : null}
 					{headerText ? (
 						<div className="header-text">{headerText}</div>
+					) : null}
+					{renderHeaderText ? (
+						<div className="header-text">{renderHeaderText()}</div>
 					) : null}
 				</div>
 
