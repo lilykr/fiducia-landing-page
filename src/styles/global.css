@@ -46,6 +46,13 @@ main {
 	width: 100%;
 }
 
+@media only screen and (max-width:600px) {
+	main {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
 .layout {
 	display: flex;
 	flex-direction: column;
@@ -56,6 +63,12 @@ h1 {
 	font-family: "sagonaBold";
 	font-size: 48px;
 	color: white;
+}
+
+@media only screen and (max-width:600px) {
+	h1 {
+		font-size: 32px;
+	}
 }
 
 header {
@@ -228,6 +241,14 @@ footer {
 	margin-bottom: 10px;
 }
 
+/* Process */
+
+@media only screen and (max-width:600px) {
+	.process-step {
+		margin-left: 65px;
+	}
+}
+
 .process-step {
 	margin-bottom: 100px
 }
@@ -262,6 +283,23 @@ footer {
 	background-color: white;
 	margin-left: -46px;
 	margin-top: 20px;
+}
+
+/* Équipe */
+
+@media only screen and (max-width:600px) {
+	.equipe-container-sarah {
+		flex-direction: column;
+	}
+	.equipe-text-sarah {
+		padding-left: 25px !important;
+	}
+	.equipe-container-chris {
+		flex-direction: column !important;
+	}
+	.equipe-text-chris {
+		padding-left: 25px;
+	}
 }
 
 .equipe-text-sarah>h2 {
