@@ -131,6 +131,6 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 					</div>
 				</div>
 			</footer>
-		</div >
+		</div>
 	)
 }
