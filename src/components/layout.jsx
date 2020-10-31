@@ -41,10 +41,6 @@ const arrLinkNavBar = [
 
 ]
 
-{
-
-}
-
 export default function Layout({ children, headTitle, headerText, renderHeaderText }) {
 	const [opened, setOpened] = React.useState(false)
 
@@ -58,8 +54,6 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 	const onClickElem = () => {
 		setOpened(false)
 	}
-
-	console.log({ opened })
 
 	const links = arrLinkNavBar.map(element => {
 		if (element.logo) {

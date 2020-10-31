@@ -114,9 +114,17 @@ nav {
 	height: 120px;
 	align-items: center;
 	max-width: 1024px;
+	opacity: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+	nav {
+		opacity: 1;
+	}
 }
 
 .nav-menu-mobile {
+	opacity: 1 !important;
 	z-index: 5;
 	position: fixed;
 	height: 100vh;
