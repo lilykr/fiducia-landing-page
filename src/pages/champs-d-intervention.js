@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 
@@ -7,6 +8,11 @@ export default function Champs() {
     <Layout
       headTitle="Champs d'intervention"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fiducia - Champs d'intervention</title>
+        <link rel="canonical" href="https://fiducia-cf.com/champs-d-intervention" />
+      </Helmet>
       <div className="container">
         <div className="text-top-champs">L’ensemble de nos solutions, montages, et stratégies globales sont élaborés selon notre expérience et nos compétences juridiques, fiscales et financières. Nous sommes en capacité de répondre à vos objectifs comme notamment</div>
         <ul className="list-champs">
