@@ -44,9 +44,9 @@ const arrLinkNavBar = [
 export default function Layout({ children, headTitle, headerText, renderHeaderText }) {
 	const [opened, setOpened] = React.useState(false)
 
-	const isMobile = useMediaQuery({
-		query: '(max-width: 1024px)'
-	})
+	// const isMobile = useMediaQuery({
+	// 	query: '(max-width: 1024px)'
+	// })
 
 	const toggle = () => {
 		setOpened(!opened)
@@ -55,37 +55,36 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 		setOpened(false)
 	}
 
-	const links = arrLinkNavBar.map(element => {
-		if (element.logo) {
-			if (isMobile)
-				return null
-			return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
-		}
-		return <Link key={element.link} className={`link-header ${ typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
-
-	})
-
 	return (
 		<div className="layout">
 			<header className={children ? "" : "header-full-height"}>
 				<div className="nav-gradient">
-					{isMobile ?
-						<>
-							<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
-							<div className="burger-menu" onClick={toggle}>
-								<div className={c("burger burger-slide", opened && "open")}>
-									<div className="burger-lines"></div>
-								</div>
+					<div className="mobile-nav-wrapper">
+						<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
+						<div className="burger-menu" onClick={toggle}>
+							<div className={c("burger burger-slide", opened && "open")}>
+								<div className="burger-lines"></div>
 							</div>
-							<nav className={c("nav-menu-mobile", opened ? "visible" : "")} >
-								{links}
-							</nav>
-						</>
-						:
-						<nav>
-							{links}
+						</div>
+						<nav className={c("nav-menu-mobile", opened ? "visible" : "")} >
+						{arrLinkNavBar.map(element => {
+							if (element.logo) {
+								return null
+							}
+							return <Link key={element.link} className={`link-header ${typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+
+						})}
 						</nav>
-					}
+					</div>
+					<nav className="desktop-nav-wrapper">
+						{arrLinkNavBar.map(element => {
+							if (element.logo) {
+								return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
+							}
+							return <Link key={element.link} className={`link-header ${typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+
+						})}
+					</nav>
 				</div>
 				<div className="container">
 					{headTitle ? (

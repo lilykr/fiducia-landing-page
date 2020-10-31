@@ -69,6 +69,7 @@ h1 {
 	h1 {
 		font-size: 32px;
 	}
+
 	.layout {
 		margin: 0px;
 		max-width: 100vw;
@@ -105,6 +106,24 @@ header {
 	justify-content: center;
 	font-family: "sagonaLight";
 	font-size: 17px;
+}
+
+.mobile-nav-wrapper {
+	display: none;
+}
+
+.desktop-nav-wrapper {
+	/* display: none; */
+}
+
+@media only screen and (max-width:1024px) {
+	.mobile-nav-wrapper {
+		display: block;
+	}
+
+	.desktop-nav-wrapper {
+		display: none;
+	}
 }
 
 .nav-gradient>.burger-menu {
@@ -295,7 +314,8 @@ footer {
 	.process-line {
 		height: 700px;
 	}
-	.process-line-white  {
+
+	.process-line-white {
 		height: 700px;
 	}
 }
