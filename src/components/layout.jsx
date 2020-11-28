@@ -41,16 +41,12 @@ const arrLinkNavBar = [
 
 ]
 
-{
-
-}
-
 export default function Layout({ children, headTitle, headerText, renderHeaderText }) {
 	const [opened, setOpened] = React.useState(false)
 
-	const isMobile = useMediaQuery({
-		query: '(max-width: 1024px)'
-	})
+	// const isMobile = useMediaQuery({
+	// 	query: '(max-width: 1024px)'
+	// })
 
 	const toggle = () => {
 		setOpened(!opened)
@@ -59,39 +55,36 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 		setOpened(false)
 	}
 
-	console.log({ opened })
-
-	const links = arrLinkNavBar.map(element => {
-		if (element.logo) {
-			if (isMobile)
-				return null
-			return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
-		}
-		return <Link key={element.link} className={`link-header ${ typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
-
-	})
-
 	return (
 		<div className="layout">
 			<header className={children ? "" : "header-full-height"}>
 				<div className="nav-gradient">
-					{isMobile ?
-						<>
-							<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
-							<div className="burger-menu" onClick={toggle}>
-								<div className={c("burger burger-slide", opened && "open")}>
-									<div className="burger-lines"></div>
-								</div>
+					<div className="mobile-nav-wrapper">
+						<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
+						<div className="burger-menu" onClick={toggle}>
+							<div className={c("burger burger-slide", opened && "open")}>
+								<div className="burger-lines"></div>
 							</div>
-							<nav className={c("nav-menu-mobile", opened ? "visible" : "")} >
-								{links}
-							</nav>
-						</>
-						:
-						<nav>
-							{links}
+						</div>
+						<nav className={c("nav-menu-mobile", opened ? "visible" : "")} >
+						{arrLinkNavBar.map(element => {
+							if (element.logo) {
+								return null
+							}
+							return <Link key={element.link} className={`link-header ${typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+
+						})}
 						</nav>
-					}
+					</div>
+					<nav className="desktop-nav-wrapper">
+						{arrLinkNavBar.map(element => {
+							if (element.logo) {
+								return <img className="logo-header" src="logo-fiducia.png" alt="Logo Fiducia" />
+							}
+							return <Link key={element.link} className={`link-header ${typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
+
+						})}
+					</nav>
 				</div>
 				<div className="container">
 					{headTitle ? (
@@ -114,19 +107,19 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 			<footer>
 				<div className="footer-elements-container">
 					<div className="elements-footer">
-						<img className="logo-footer" src="/phone.svg" />
+						<img className="logo-footer" src="/phone.svg" alt="telephone"/>
 						<div>06 17 88 87 35
 					<br />06 86 14 21 74</div>
 					</div>
 					<div className="footer-separator" />
 					<div className="elements-footer">
-						<img className="logo-footer" src="/location.svg" style={{ height: "25px" }} />
+						<img className="logo-footer" src="/location.svg" style={{ height: "25px" }}  alt="adresse" />
 						<div>41 rue Nicolas Bachelier
 					<br />31000 Toulouse </div>
 					</div>
 					<div className="footer-separator" />
 					<div className="elements-footer">
-						<img className="logo-footer" src="/mail.svg" />
+						<img className="logo-footer" src="/mail.svg"  alt="mail"/>
 						<div>contact@fiducia-cf.com</div>
 					</div>
 				</div>

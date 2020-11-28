@@ -1,5 +1,6 @@
 import c from "classnames"
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import Layout from "../components/layout"
 
@@ -98,6 +99,11 @@ export default function Home() {
 
 Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou remplir le formulaire de contact ci-après."
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fiducia - contact</title>
+        <link rel="canonical" href="https://fiducia-cf.com/contact" />
+      </Helmet>
       <div className="container">
         {!done ?
           <div className="contact-page">
@@ -146,8 +152,8 @@ Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou r
           </div>
           :
           <>
-            <h2 style={{marginBottom: "10px"}}>Merci de nous avoir contactés</h2>
-            <div style={{fontSize: "1.16em"}}>Nous reviendrons vers vous rapidement.</div>
+            <h2 style={{ marginBottom: "10px" }}>Merci de nous avoir contactés</h2>
+            <div style={{ fontSize: "1.16em" }}>Nous reviendrons vers vous rapidement.</div>
           </>
         }
       </div>

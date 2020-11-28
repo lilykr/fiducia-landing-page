@@ -69,6 +69,12 @@ h1 {
 	h1 {
 		font-size: 32px;
 	}
+
+	.layout {
+		margin: 0px;
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
 }
 
 header {
@@ -102,6 +108,24 @@ header {
 	font-size: 17px;
 }
 
+.mobile-nav-wrapper {
+	display: none;
+}
+
+.desktop-nav-wrapper {
+	/* display: none; */
+}
+
+@media only screen and (max-width:1024px) {
+	.mobile-nav-wrapper {
+		display: block;
+	}
+
+	.desktop-nav-wrapper {
+		display: none;
+	}
+}
+
 .nav-gradient>.burger-menu {
 	/* visibility: hidden; */
 	/* opacity: 0; */
@@ -114,9 +138,17 @@ nav {
 	height: 120px;
 	align-items: center;
 	max-width: 1024px;
+	opacity: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+	nav {
+		opacity: 1;
+	}
 }
 
 .nav-menu-mobile {
+	opacity: 1 !important;
 	z-index: 5;
 	position: fixed;
 	height: 100vh;
@@ -228,9 +260,11 @@ footer {
 		padding: 40px 0px;
 		flex-direction: column;
 	}
+
 	.elements-footer {
 		padding: 20px
 	}
+
 	.footer-separator {
 		height: 35px;
 	}
@@ -276,9 +310,20 @@ footer {
 	margin-top: 20px;
 }
 
+@media only screen and (max-width:600px) {
+	.process-line {
+		height: 700px;
+	}
+
+	.process-line-white {
+		height: 700px;
+	}
+}
+
+
 .process-line-white {
 	position: absolute;
-	width: 1px;
+	width: 2px;
 	height: 300px;
 	background-color: white;
 	margin-left: -46px;
@@ -291,12 +336,15 @@ footer {
 	.equipe-container-sarah {
 		flex-direction: column;
 	}
+
 	.equipe-text-sarah {
 		padding-left: 25px !important;
 	}
+
 	.equipe-container-chris {
 		flex-direction: column !important;
 	}
+
 	.equipe-text-chris {
 		padding-left: 25px;
 	}
@@ -417,9 +465,25 @@ footer {
 	justify-content: space-between;
 }
 
+@media only screen and (max-width:828px) {
+	.contact-page {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
 .contact-form {
 	display: flex;
 	flex-direction: column;
+}
+
+
+@media only screen and (max-width:828px) {
+	.contact-form {
+		margin: auto;
+		max-width: 404px;
+	}
 }
 
 .infos-contact {
@@ -429,12 +493,26 @@ footer {
 	text-align: end;
 }
 
+@media only screen and (max-width:828px) {
+	.infos-contact {
+		align-items: flex-start;
+		text-align: start;
+		/* margin: auto; */
+		margin-bottom: 100px;
+		/* width: 404px; */
+		max-width: 404px;
+	}
+}
+
+
 .infos-contact>h2 {
 	margin-top: 10px;
 }
 
 input {
+	/* width: 100%; */
 	width: 380px;
+	max-width: 380px;
 	height: 32px;
 	border: none;
 	background-color: rgba(56, 65, 73, 6%);
@@ -445,8 +523,22 @@ input {
 	font-size: 1em;
 }
 
+@media only screen and (max-width: 490px) {
+	input {
+		width: auto;
+	}
+
+	textarea {
+		width: auto;
+	}
+}
+
+
+
 textarea {
 	width: 380px;
+	/* width: 100%; */
+	max-width: 380px;
 	height: 32px;
 	border: none;
 	background-color: rgba(56, 65, 73, 6%);
@@ -546,7 +638,9 @@ textarea.form-error {
 	margin-top: -0.125em;
 }
 
-.burger .burger-lines, .burger .burger-lines:after, .burger .burger-lines:before {
+.burger .burger-lines,
+.burger .burger-lines:after,
+.burger .burger-lines:before {
 	pointer-events: none;
 	display: block;
 	content: '';
@@ -577,25 +671,31 @@ textarea.form-error {
 		transform: translateX(0);
 		opacity: 1;
 	}
+
 	25% {
 		opacity: 0;
 	}
+
 	49% {
 		-webkit-transform: translateX(-0.7em);
 		transform: translateX(-0.7em);
 		opacity: 0;
 	}
+
 	50% {
 		-webkit-transform: translateX(0.7em);
 		transform: translateX(0.7em);
 		opacity: 0;
 	}
+
 	51% {
 		opacity: 0;
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		-webkit-transform: translateX(0px);
 		transform: translateX(0px);
@@ -609,25 +709,31 @@ textarea.form-error {
 		transform: translateX(0);
 		opacity: 1;
 	}
+
 	25% {
 		opacity: 0;
 	}
+
 	49% {
 		-webkit-transform: translateX(-0.7em);
 		transform: translateX(-0.7em);
 		opacity: 0;
 	}
+
 	50% {
 		-webkit-transform: translateX(0.7em);
 		transform: translateX(0.7em);
 		opacity: 0;
 	}
+
 	51% {
 		opacity: 0;
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		-webkit-transform: translateX(0px);
 		transform: translateX(0px);
@@ -641,7 +747,8 @@ textarea.form-error {
 	transition: .1s all .15s;
 }
 
-.burger.burger-slide .burger-lines:after, .burger.burger-slide .burger-lines:before {
+.burger.burger-slide .burger-lines:after,
+.burger.burger-slide .burger-lines:before {
 	width: 2em;
 	-webkit-transition: .1s all .15s;
 	-o-transition: .1s all .15s;
@@ -665,7 +772,8 @@ textarea.form-error {
 	box-shadow: none !important;
 }
 
-.burger.burger-slide.open .burger-lines:before, .burger.burger-slide.open .burger-lines:after {
+.burger.burger-slide.open .burger-lines:before,
+.burger.burger-slide.open .burger-lines:after {
 	left: 0.5em;
 	top: 0px;
 	box-shadow: none !important;
