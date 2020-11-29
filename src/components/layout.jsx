@@ -114,8 +114,8 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 					<div className="footer-separator" />
 					<div className="elements-footer">
 						<img className="logo-footer" src="/location.svg" style={{ height: "25px" }}  alt="adresse" />
-						<div>41 rue Nicolas Bachelier
-					<br />31000 Toulouse </div>
+						<div>45 rue des Saules
+					<br />31400 Toulouse </div>
 					</div>
 					<div className="footer-separator" />
 					<div className="elements-footer">

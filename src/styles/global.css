@@ -310,6 +310,7 @@ footer {
 	margin-top: 20px;
 }
 
+
 @media only screen and (max-width:600px) {
 	.process-line {
 		height: 700px;
@@ -320,15 +321,15 @@ footer {
 	}
 }
 
-
 .process-line-white {
 	position: absolute;
 	width: 2px;
-	height: 300px;
+	height: 133px;
 	background-color: white;
 	margin-left: -46px;
 	margin-top: 20px;
 }
+
 
 /* Équipe */
 
@@ -790,4 +791,41 @@ textarea.form-error {
 	-webkit-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
+}
+
+
+.process-step-title-home {
+	font-size: 1.2em;
+}
+
+.process-step-home {
+	color:white;
+	border-left: 1px solid white;
+	margin: 0;
+	height: 80px;
+}
+
+.process-step-home.noLine {
+	border-left: 1px solid transparent;
+
+}
+
+.process-step-home > h2 {
+	margin: 0;
+	padding-left: 16px;
+	padding-bottom: 32px;
+	position: absolute;
+	margin-top: -11px;
+}
+
+
+.process-handle-home {
+	position: absolute;
+	width: 9px;
+	height: 9px;
+	margin-top: -2px;
+	background-color: white;
+	z-index: 10;
+	margin-top: -3px;
+	margin-left: -5px;
 }
