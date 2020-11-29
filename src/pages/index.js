@@ -1,8 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-
 import Layout from "../components/layout"
-import ProcessStep from "../components/ProcessStep"
+import ProcessStepHome from "../components/ProcessStepHome"
 
 export default function Home() {
   return (
@@ -21,16 +20,20 @@ Nous mutualisons notre expertise et partageons notre savoir-faire afin de vous a
           <br />
           <br />
     Fiducia Conseil et Finance est adhérent de la Chambre Nationale des Conseils en Gestion de Patrimoine (CNCGP) et dispose d’un ensemble d’habilitations pour vous proposer une solution globale et sur-mesure (investissement financier, assurance, immobilier, produits bancaires). Nous exerçons un métier réglementé dans lequel il est nécessaire de se former et informer en toute transparence dans l’objectif de vous éclairer sur vos possibilités patrimoniales.
-          <ProcessStep title="Rencontre, découverte et détermination de vos objectifs" >
-          </ProcessStep>
-          <ProcessStep title="Définition de nos missions" >
-          </ProcessStep>
-          <ProcessStep title="Rédaction et restitution de l’audit patrimonial" >
-          </ProcessStep>
-          <ProcessStep title="Mise en place des préconisations" >
-          </ProcessStep>
-          <ProcessStep title="Suivi et accompagnement">
-          </ProcessStep>
+          <br />
+          <br />
+          <br />
+          <br />
+          <ProcessStepHome title="Rencontre, découverte et détermination de vos objectifs" >
+          </ProcessStepHome>
+          <ProcessStepHome title="Définition de nos missions" >
+          </ProcessStepHome>
+          <ProcessStepHome title="Rédaction et restitution de l’audit patrimonial" >
+          </ProcessStepHome>
+          <ProcessStepHome title="Mise en place des préconisations" >
+          </ProcessStepHome>
+          <ProcessStepHome title="Suivi et accompagnement" noLine >
+          </ProcessStepHome>
         </>
       )}
       />
