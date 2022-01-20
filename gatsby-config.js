@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-graphql-config`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
