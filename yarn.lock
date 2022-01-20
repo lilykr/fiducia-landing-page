@@ -5527,6 +5527,14 @@ gatsby-plugin-google-analytics@^2.3.19:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
+gatsby-plugin-graphql-config@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-config/-/gatsby-plugin-graphql-config-1.5.0.tgz#d0c6249337fe8ebbcba6a4abbd7a3385daebf7bc"
+  integrity sha512-k6DI1ariiwwO1rl+m/hQW0sehlMQ5ytiKyT7F0M1LItRc3Bl9uHRojvAvSzwfC3wLTxGaNkMzqkRdvxjV+bkrg==
+  dependencies:
+    "@babel/runtime" "^7.15.4"
+    fs-extra "^10.0.0"
+
 gatsby-plugin-image@^2.5.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-2.5.2.tgz#bdd5af8a137a1a425a87b17c3dd908cfccea83e7"

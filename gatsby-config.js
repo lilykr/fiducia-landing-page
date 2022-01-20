@@ -14,6 +14,7 @@ require('dotenv').config({
 module.exports = {
   /* Your site config here */
   plugins: [
+    `gatsby-plugin-graphql-config`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -31,6 +32,7 @@ module.exports = {
         accessToken: process.env.PRISMIC_ACCESS_TOKEN,
         customTypesApiToken: process.env.PRISMIC_CUSTOM_TYPES_API_TOKEN,
         linkResolver: (doc) => linkResolver(doc),
+
       },
     },
   ],

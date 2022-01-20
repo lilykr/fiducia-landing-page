@@ -6,19 +6,19 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
-  
   "dependencies": {
     "@prismicio/react": "^2.0.3",
     "classnames": "^2.2.6",
     "gatsby": "^2.24.67",
     "gatsby-plugin-google-analytics": "^2.3.19",
+    "gatsby-plugin-graphql-config": "^1.5.0",
     "gatsby-plugin-image": "^2.5.1",
     "gatsby-plugin-react-helmet": "^3.3.14",
     "gatsby-source-prismic": "^5.2.5",
