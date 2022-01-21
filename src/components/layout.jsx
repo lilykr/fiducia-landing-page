@@ -61,7 +61,7 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 			<header className={children ? "" : "header-full-height"}>
 				<div className="nav-gradient">
 					<div className="mobile-nav-wrapper">
-						<img className="logo-header mobile" src="logo-fiducia.png" alt="Logo Fiducia" />
+						<StaticImage className="logo-header mobile" src="../../static/logo-fiducia.png" alt="Logo Fiducia" />
 						<div className="burger-menu" onClick={toggle}>
 							<div className={c("burger burger-slide", opened && "open")}>
 								<div className="burger-lines"></div>
