@@ -10,13 +10,16 @@ export default function ArticleCard({ title, img, alt, description, date, proper
                 {realEstate ?
                     <>
                         <div className='card-categories'>
-                            <p className='category'>Prix: {price ? `${price}€` : "Non renseigné"}</p>
-                            <p className='category'>Surface: {surface ? `${surface}m²` : "Non renseignée"}</p>
+                            <div>
+                                <p className='category'>Prix: {price ? `${price}€` : "Non renseigné"}</p>
+                                <p className='category'>Surface: {surface ? `${surface}m²` : "Non renseignée"}</p>
+                            </div>
+                            <div>
+                                <p className='category'>Type de bien: {propertyType ? propertyType : "Non renseigné"}</p>
+                                <p className='category'>Nombre de pièces: {numberOfRooms ? numberOfRooms : "Non renseigné"}</p>
+                            </div>
                         </div>
-                        <div className='card-categories'>
-                            <p className='category'>Type de bien: {propertyType ? propertyType : "Non renseigné"}</p>
-                            <p className='category'>Nombre de pièces: {numberOfRooms ? numberOfRooms : "Non renseigné"}</p>
-                        </div>
+
                         <p className='category'>Localisation: {localisation ? localisation : "Non renseigné"}</p>
                     </>
                     : <p>{date}</p>}

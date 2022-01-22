@@ -874,6 +874,11 @@ textarea.form-error {
   width: 350px;
 }
 
+.article-header {
+  display: grid;
+  grid-auto-flow: column;
+}
+
 .title-article {
   font-family: "sagonaBold";
   font-size: 32px;
