@@ -887,3 +887,7 @@ textarea.form-error {
 .article-link {
   color: black;
 }
+
+.article-date {
+  font-weight: bold;
+}
