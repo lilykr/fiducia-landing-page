@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import { Helmet } from "react-helmet"
 import ArticleCard from '../../components/articleCard'
 import Layout from "../../components/layout"
+
 export default function RealEstate({ data }) {
 
   if (!data) return null

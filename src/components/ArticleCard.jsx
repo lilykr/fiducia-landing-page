@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 export default function ArticleCard({ title, img, alt, description, date, propertyType, price, surface, numberOfRooms, localisation, realEstate }) {
+    const formattedDate = new Date(date).toLocaleDateString("fr-FR", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
     return (
         <div className='card'>
             <img className='card-image' src={img} alt={alt} />
@@ -22,7 +23,7 @@ export default function ArticleCard({ title, img, alt, description, date, proper
 
                         <p className='category'>Localisation: {localisation ? localisation : "Non renseigné"}</p>
                     </>
-                    : <p>{date}</p>}
+                    : <p>{formattedDate}</p>}
 
                 <p>{description}</p>
             </div>
