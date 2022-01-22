@@ -123,6 +123,18 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 						<img className="logo-footer" src="/mail.svg" alt="mail" />
 						<div>contact@fiducia-cf.com</div>
 					</div>
+					<div className="footer-separator" />
+					<div className="elements-footer">
+
+						<div className="elements-footer-social-media">
+							<a href='https://www.instagram.com/fiduciaconseiletfinance/?hl=en'>
+								<img className="logo-footer-social-media" src="/instagram.svg" alt="instagram" />
+							</a>
+							{/* <img className="logo-footer-social-media" src="/facebook.svg" alt="facebook" /> */}
+						</div>
+						<div>Suivez-nous sur les réseaux</div>
+					</div>
+
 				</div>
 			</footer>
 		</div>

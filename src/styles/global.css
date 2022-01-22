@@ -263,6 +263,14 @@ footer {
   font-size: 1.4em;
 }
 
+.elements-footer-social-media {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-family: "speak";
+  font-size: 1.4em;
+}
+
 .footer-separator {
   width: 1px;
   height: 90px;
@@ -288,6 +296,11 @@ footer {
 .logo-footer {
   height: 22px;
   margin-bottom: 10px;
+}
+
+.logo-footer-social-media {
+  height: 22px;
+  margin: 10px;
 }
 
 /* Process */

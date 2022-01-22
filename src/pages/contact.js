@@ -111,10 +111,10 @@ Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou r
             <div className="infos-contact">
               <h2>Nos coordonnées</h2>
               <div>06 17 88 87 35
-            <br />
-            06 86 14 21 74
-        <br />
-        contact@fiducia-cf.com</div>
+                <br />
+                06 86 14 21 74
+                <br />
+                contact@fiducia-cf.com</div>
               <br />
               <h2>Horaires</h2>
               <div>Du lundi au vendredi de 8h30 à 18h00</div>
