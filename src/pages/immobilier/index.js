@@ -9,11 +9,23 @@ export default function RealEstate({ data }) {
 
   if (!data) return null
   const documents = data.allPrismicArticleImmobilier.nodes
+
+  const orderedDocuments = documents.sort(function (a, b) {
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(b.data.date) - new Date(a.data.date)
+  })
+
   return (
     <Layout
       headTitle="Immobilier">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fiducia - Immobilier</title>
+        <link rel="canonical" href="https://fiducia-cf.com/immobilier" />
+      </Helmet>
       <div className="container">
-        {documents.map(element => {
+        {orderedDocuments.map(element => {
           return (
             <Link key={element.id} to={`/immobilier/${element.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <ArticleCard

@@ -21,6 +21,11 @@ export default function Newsletter({ data }) {
     <Layout
       headTitle="Newsletter"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fiducia - Newsletter</title>
+        <link rel="canonical" href="https://fiducia-cf.com/newsletter" />
+      </Helmet>
       <div className="container">
         {orderedDocuments.map(element => {
           return (

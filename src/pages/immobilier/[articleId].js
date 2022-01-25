@@ -7,7 +7,7 @@ export default function RealEstateArticle({ ...props }) {
 
     if (!props.data) return null
     const document = props.data.prismicArticleImmobilier.data
-    console.log('doc', document)
+
     return (
         <Layout
             headTitle="Immobilier">
