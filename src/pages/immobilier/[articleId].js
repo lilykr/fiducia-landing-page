@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 
 export default function RealEstateArticle({ ...props }) {
 
-    if (!props.data) return null
+    if (!props?.data?.prismicArticleImmobilier?.data) return null
     const document = props.data.prismicArticleImmobilier.data
 
     return (

@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 
 export default function NewsletterArticle({ ...props }) {
 
-    if (!props.data) return null
+    if (!props?.data?.prismicArticle?.data) return null
     const document = props.data.prismicArticle.data
 
     const formattedDate = new Date(document.date).toLocaleDateString("fr-FR", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
