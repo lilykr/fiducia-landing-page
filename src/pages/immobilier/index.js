@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from "react"
 import { graphql } from 'gatsby'
 import { Helmet } from "react-helmet"
-import ArticleCard from '../../components/articleCard'
+import ArticleCard from '../../components/ArticleCard'
 import Layout from "../../components/layout"
 
 export default function RealEstate({ data }) {

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from 'gatsby'
 import { Helmet } from "react-helmet"
 import { graphql } from 'gatsby'
-import ArticleCard from '../../components/articleCard'
+import ArticleCard from '../../components/ArticleCard'
 import Layout from "../../components/layout"
 
 
