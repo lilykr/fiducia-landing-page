@@ -9,6 +9,7 @@ import Layout from "../../components/layout"
 export default function Newsletter({ data }) {
 
   if (!data) return null
+
   const documents = data.allPrismicArticle.nodes
 
   const orderedDocuments = documents.sort(function (a, b) {
@@ -27,18 +28,20 @@ export default function Newsletter({ data }) {
         <link rel="canonical" href="https://fiducia-cf.com/newsletter" />
       </Helmet>
       <div className="container">
-        {orderedDocuments.map(element => {
-          return (
-            <Link key={element.id} to={`/newsletter/${element.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-              <ArticleCard
-                realEstate={false}
-                date={element.data.date}
-                title={element.data.title.text}
-                img={element.data.image.thumbnails.cardImage.url}
-                alt={element.data.image.alt}
-                description={element.data.description.text}
-              /></Link>)
-        })}
+        {!orderedDocuments.length ?
+          <p>Aucun article à afficher</p>
+          : orderedDocuments.map(element => {
+            return (
+              <Link key={element.id} to={`/newsletter/${element.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <ArticleCard
+                  realEstate={false}
+                  date={element.data.date}
+                  title={element.data.title.text}
+                  img={element.data.image.thumbnails.cardImage.url}
+                  alt={element.data.image.alt}
+                  description={element.data.description.text}
+                /></Link>)
+          })}
       </div>
 
     </Layout>
