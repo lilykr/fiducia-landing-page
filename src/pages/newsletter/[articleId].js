@@ -15,7 +15,7 @@ export default function NewsletterArticle({ ...props }) {
             headTitle="Newsletter">
             <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=fiducia"></script>
             <div className="container">
-                <img src={document.image.thumbnails.banner.url} alt={document.image.alt} />
+                <img className="image-banner" src={document.image.thumbnails.banner.url} alt={document.image.alt} />
                 <h1 className="blue-title">{document.title.text}</h1>
                 <p className='article-date'>{formattedDate}</p>
 

@@ -13,7 +13,7 @@ export default function RealEstateArticle({ ...props }) {
             headTitle="Immobilier">
             <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=fiducia"></script>
             <div className="container">
-                <img src={document.image.thumbnails.banner.url} alt={document.image.alt} />
+                <img className='image-banner' src={document.image.thumbnails.banner.url} alt={document.image.alt} />
                 <h1 className="blue-title">{document.title.text}</h1>
                 <div className="article-header">
                     <div className='left-column-article-header'>

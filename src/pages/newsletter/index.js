@@ -11,12 +11,18 @@ export default function Newsletter({ data }) {
   if (!data) return null
   const documents = data.allPrismicArticle.nodes
 
+  const orderedDocuments = documents.sort(function (a, b) {
+    // Turn your strings into dates, and then subtract them
+    // to get a value that is either negative, positive, or zero.
+    return new Date(b.data.date) - new Date(a.data.date)
+  })
+
   return (
     <Layout
       headTitle="Newsletter"
     >
       <div className="container">
-        {documents.map(element => {
+        {orderedDocuments.map(element => {
           return (
             <Link key={element.id} to={`/newsletter/${element.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <ArticleCard
