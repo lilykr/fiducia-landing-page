@@ -117,7 +117,8 @@ Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou r
                 contact@fiducia-cf.com</div>
               <br />
               <h2>Horaires</h2>
-              <div>Du lundi au vendredi de 8h30 à 18h00</div>
+              <div>Du lundi au vendredi <br />
+                de 9h-12h30, 14h-18h</div>
             </div>
             <div className="container-form">
               <form
@@ -156,6 +157,16 @@ Pour tout renseignement, veuillez nous contacter aux coordonnées suivantes ou r
             <div style={{ fontSize: "1.16em" }}>Nous reviendrons vers vous rapidement.</div>
           </>
         }
+        <div className='google-maps-embed'>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.404878317488!2d1.4399032151571811!3d43.59811086400991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb7d13768793%3A0x68e7f51087bc5d3e!2s6%20Rue%20des%20Couteliers%2C%2031000%20Toulouse!5e0!3m2!1sen!2sfr!4v1645350716955!5m2!1sen!2sfr"
+            width="100%"
+            height="450"
+            frameBorder=""
+            style={{ border: 0 }}
+            allowFullScreen=""
+            aria-hidden="false"
+            tabIndex="0"></iframe>
+        </div>
       </div>
 
     </Layout>

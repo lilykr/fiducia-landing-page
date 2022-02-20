@@ -42,7 +42,7 @@ const arrLinkNavBar = [
 
 ]
 
-export default function Layout({ children, headTitle, headerText, renderHeaderText }) {
+export default function Layout({ children, headTitle, subTitle, headerText, renderHeaderText }) {
 	const [opened, setOpened] = React.useState(false)
 
 	// const isMobile = useMediaQuery({
@@ -61,7 +61,7 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 			<header className={children ? "" : "header-full-height"}>
 				<div className="nav-gradient">
 					<div className="mobile-nav-wrapper">
-						<StaticImage className="logo-header mobile" src="../../static/logo-fiducia.png" alt="Logo Fiducia" />
+						<StaticImage className="logo-header mobile" src="../../static/logo-fiducia.png" alt="Logo de Fiducia, le Conseil en gestion de patrimoine à Toulouse”" />
 						<div className="burger-menu" onClick={toggle}>
 							<div className={c("burger burger-slide", opened && "open")}>
 								<div className="burger-lines"></div>
@@ -80,7 +80,7 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 					<nav className="desktop-nav-wrapper">
 						{arrLinkNavBar.map(element => {
 							if (element.logo) {
-								return <StaticImage key={element.name} className="logo-header" src="../../static/logo-fiducia.png" alt="Logo Fiducia" />
+								return <StaticImage key={element.name} className="logo-header" src="../../static/logo-fiducia.png" alt="Logo de Fiducia, le Conseil en gestion de patrimoine à Toulouse”" />
 							}
 							return <Link key={element.link} className={`link-header ${typeof window !== `undefined` && window.location.pathname === element.link ? "link-header-underlined" : ""}`} to={element.link}>{(element.name)}</Link>
 
@@ -89,7 +89,11 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 				</div>
 				<div className="container">
 					{headTitle ? (
-						<h1>{headTitle}</h1>
+						<>
+							<h1>{headTitle}</h1>
+							<h2 className="subTitle">{subTitle}</h2>
+
+						</>
 					) : null}
 					{headerText ? (
 						<div className="header-text">{headerText}</div>
@@ -115,8 +119,8 @@ export default function Layout({ children, headTitle, headerText, renderHeaderTe
 					<div className="footer-separator" />
 					<div className="elements-footer">
 						<img className="logo-footer" src="/location.svg" style={{ height: "25px" }} alt="adresse" />
-						<div>45 rue des Saules
-							<br />31400 Toulouse </div>
+						<div>6 Rue des Couteliers
+							<br />31000 Toulouse </div>
 					</div>
 					<div className="footer-separator" />
 					<div className="elements-footer">

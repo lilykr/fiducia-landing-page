@@ -8,10 +8,10 @@ export default function Home() {
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Fiducia - Accueil</title>
+        <title>Fiducia - Conseil en gestion de Patrimoine à Toulouse</title>
         <link rel="canonical" href="https://fiducia-cf.com" />
       </Helmet>
-      <Layout headTitle="Fiducia Conseil et Finance" renderHeaderText={() => (
+      <Layout headTitle="Fiducia Conseil et Finance" subTitle="Conseil en gestion de patrimoine à Toulouse" renderHeaderText={() => (
         <>
           Fiducia Conseil et Finance, société spécialisée dans le conseil en stratégie patrimoniale, est née de la volonté de vous proposer un conseil global, personnalisé et objectif. Notre souhait est de centrer notre relation sur la confiance et le conseil par une approche patrimoniale globale en mettant vos objectifs au centre de nos préconisations. Une bonne compréhension de votre situation et de vos objectifs vous assure un accompagnement sur-mesure dans la création, le développement et la transmission de votre patrimoine personnel et/ou professionnel. Cette approche se matérialise par la création d’audits patrimoniaux, dans lequel l’ensemble de votre situation actuelle et future fait l’objet d’une analyse objective. Celle-ci nous permet de vous préconiser une stratégie globale en adéquation avec vos objectifs et vos contraintes.
           <br />

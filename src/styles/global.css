@@ -63,6 +63,14 @@ h1 {
   font-family: "sagonaBold";
   font-size: 48px;
   color: white;
+  margin-bottom: 10px;
+}
+
+.subTitle {
+  font-family: "speak";
+  font-size: 28px;
+  margin-top: 0px;
+  margin-bottom: 50px;
 }
 
 .blue-title {
@@ -605,6 +613,10 @@ textarea.form-error {
 
 .button-form:hover {
   background-color: #092a4b;
+}
+
+.google-maps-embed {
+  margin-top: 30px;
 }
 
 /* Burger menu */
