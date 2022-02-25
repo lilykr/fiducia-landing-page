@@ -25,7 +25,7 @@ export default function ArticleCard({ title, img, alt, description, date, proper
                     </>
                     : <p>{formattedDate}</p>}
 
-                <p>{description}</p>
+                <p className='newsletter-content'>{description}</p>
             </div>
         </div>
     )

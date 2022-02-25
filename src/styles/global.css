@@ -932,3 +932,14 @@ textarea.form-error {
 .article-date {
   font-weight: bold;
 }
+
+.newsletter-content {
+  /* text-overflow: ellipsis;
+  height: 60px;
+  overflow: hidden; */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
