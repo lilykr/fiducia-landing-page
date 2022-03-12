@@ -1,0 +1,71 @@
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "FinancialService",
+    "areaServed": [{
+    "@type": "City",
+    "name": "Toulouse",
+    "sameAs": "https://www.wikidata.org/wiki/Q7880"
+  }],
+    "telephone": "+33-06-17-88-87-35",
+    "priceRange": "€€€",
+    "description": "Fiducia Conseil et Finance gestionnaire de patrimoine à Toulouse, accompagne ses clients sur la stratégie, le conseil et la gestion de patrimoine.",
+    "sameAs": [
+        "https://www.instagram.com/fiduciaconseiletfinance/",
+        "https://www.linkedin.com/company/fiducia-conseil-et-finance",
+        "https://www.facebook.com/FiduciaConseiletFinance"
+    ],
+    "image": "https://yellow.place/file/image/thumb/0/0/6685/acrvwathwtvhhcbo.jpg",
+    "logo": "https://yellow.place/file/image/thumb/0/0/6685/acrvwathwtvhhcbo.jpg",
+    "name": "Fiducia Conseil et Finance",
+    "url": "https://fiducia-cf.com/",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue des Couteliers, 6",
+        "postalCode": "31000",
+        "addressRegion": "Haute-Garonne",
+        "addressLocality": "Toulouse",
+        "addressCountry": "https://www.wikidata.org/wiki/Q142",
+        "name": "Fiducia Conseil et Finance",
+        "@id": "https://fiducia-cf.com/"
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "09:00",
+            "dayOfWeek": [
+                "Friday",
+                "Wednesday",
+                "Tuesday",
+                "Thursday",
+                "Monday"
+            ],
+            "closes": "12:30",
+            "name": "Opening Hours M-Th",
+            "@id": "https://fiducia-cf.com/#OpeningHoursSpecification"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "opens": "14:00",
+            "dayOfWeek": [
+                "Friday",
+                "Wednesday",
+                "Tuesday",
+                "Thursday",
+                "Monday"
+            ],
+            "closes": "18:00",
+            "name": "Opening Hours F-Su",
+            "@id": "https://fiducia-cf.com/#OpeningHoursSpecification1"
+        }
+    ],
+    "geo": {
+        "@type": "GeoCoordinates",
+        "longitude": "43.598107",
+        "latitude": "1.4398979",
+        "name": "Fiducia Conseil et Finance",
+        "@id": "https://fiducia-cf.com/#GeoCoordinates"
+    },
+    "@id": "https://fiducia-cf.com/FinancialService"
+}
+</script>
